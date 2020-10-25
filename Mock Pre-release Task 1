@@ -1,0 +1,35 @@
+Module Module1
+
+    Sub Main()
+		' Declaring Punctuality and bus array
+		Dim Punctuality As Integer
+		Dim busA(19) As Integer
+		' Loop FOR..TO..NEXT 
+		For count = 0 To 19
+
+			' Asking driver to enter punctuality (numbers)
+			Console.WriteLine("Enter Punctuality. In order of Mon-Fri for 4 weeks. Input positive number for early, 0 for on time and negative for late, for Bus A: ")
+			Punctuality = Console.ReadLine()
+
+			' Putting punctuality into the array
+			busA(count) = Punctuality
+			' Repeats the loop until ctr = 19
+
+		Next
+
+
+		Dim counter As Integer
+		For counter = 0 To 19
+
+
+			Dim time As String = If(counter = 19, "time", $"timing {counter}")
+		Console.WriteLine($"busAtimes {time}: {busA(counter)}")
+    
+    ' ^ Need to find a way to print the array. Try and run this idk if it works.
+
+
+		Next
+
+	End Sub
+
+End Module
